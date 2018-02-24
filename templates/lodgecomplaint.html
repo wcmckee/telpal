@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Lodge a complaint</title>
+{% if name %}
+  <h1>Lodge Complaint {{ name }}!</h1>
+{% else %}
+  <body>
+  <h1>Lodge Complaint</h1>
+  <img src="{{ gifimg }}" alt="User Image">
+  <form method="POST">
+  <input type="checkbox" name="service" value="telecom"> telecom<br>
+  <input type="checkbox" name="vehicle" value="tradesman" checked="checked"> tradesman<br>
+  <input type="submit" value="Submit">
+  </form>
+</body>
+  {% endif %}
