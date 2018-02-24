@@ -1,15 +1,67 @@
 <!doctype html>
-<title>Lodge a complaint</title>
-{% if name %}
-  <h1>Lodge Complaint {{ name }}!</h1>
-{% else %}
-  <body>
-  <h1>Lodge Complaint</h1>
-  <img src="{{ gifimg }}" alt="User Image">
+<title>TelcoPal</title>
+<body>
+<h1>TelcoPal</h1>
+<br><h3>Simplifything the Telco complaint progress</h3>
+
+  <br><img src="{{ gifimg }}" alt="User Image">
+  <br><p>Welcome. This is your one stop shop to guide you through the complaint process with with your telco provider.
+  <br>We make dealings with telcos easy and simple.
+  <br>Our process is fast, simple. Leave all the work to us.
+  <br>Lets get started</p>
+
+
   <form method="POST">
-  <input type="checkbox" name="service" value="telecom"> telecom<br>
-  <input type="checkbox" name="vehicle" value="tradesman" checked="checked"> tradesman<br>
+  <br>What date did your internet stop working?
+  <input id="date" type="date">
+
+  <p>Months:</p>
+<select name="months">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  </select>
+<br><p>Days:</p>
+<select name="days">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+    <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+<br><p>The reason for the outage:</p>
+  <input type="checkbox" name="service" value="infrasructure">Infrasructure<br>
+  <input type="checkbox" name="vehicle" value="congestion">Congestion<br>
+  <input type="checkbox" name="vehicle" value="faillink">Failed Link to Provider<br>
+  <input type="checkbox" name="vehicle" value="speed">Service Provider Internet Speed Fluctuates<br>
+  <input type="checkbox" name="vehicle" value="equipt">Equipment Failure<br>
+  <input type="checkbox" name="vehicle" value="operator">Operator Error<br>
+  <input type="checkbox" name="vehicle" value="operator">Unknown<br>
+<br>Have you contacted your provider?
+<br><input type="radio" name="contact" value="contacted">Yes<br>
+  <input type="radio" name="contact" value="notcontacted">No<br>
+  What was the outcome?<br>
+  <input type="text" name="outcome"><br>
+
+  What is your current plan?<br>
+  <input type="text" name="outcome"><br>
+  Upload a copy of your account bill<br>
+  <input name="bill" type="file"><br>
+  Any additional details or comments?<br>
+  <input type="text" name="moredetails"><br>
+
+
+
+
+
+
   <input type="submit" value="Submit">
   </form>
 </body>
-  {% endif %}
