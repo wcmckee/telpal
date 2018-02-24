@@ -25,6 +25,10 @@ def hello(name=None):
 
     return render_template('lodgecomplaint.html', name=name, gifimg = myimg['data'][ranz]['images']['fixed_width']['url'])
 
+@app.route('/')
+def form(name=None):
+    return render_template('form.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000) #run app in debug mode on port 5000
