@@ -2,18 +2,10 @@
 
 from flask import Flask, request #import main Flask class and request object
 import requests
-import shutil
-import os
-import getpass
-from urllib.parse import urlparse
-import PIL
-import json
-from PIL import ImageDraw, ImageFont
-from PIL import Image
-from PIL import ImageDraw
 from flask_bootstrap import Bootstrap
 import giphypop
 import random
+import getpass
 myusr = getpass.getuser()
 app = Flask(__name__) #create the Flask app
 Bootstrap(app)
