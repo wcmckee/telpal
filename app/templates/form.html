@@ -90,16 +90,16 @@
         <h2 class="fs-title">Account Information</h2>
         <h3 class="fs-subtitle">Your Claim - Account Information</h3>
 
-        Who is your current plan?<br>
+        What is your current plan?<br>
         <select>
             <option value="60">$60 per month</option>
         </select>
 
         <br><br>Please upload a copy of your account bill. This helps us verify your account with your provider and assess the compensation amount you are entitled to.<br>
-        <input name="Upload file" type="button" value="Upload File" />
+        <input name="Upload file" type="button" value="Upload File" class="btn-upload" />
 
         <br><br>Please provide any additional details or comments that you think may help use with processing your claim.<br>
-        <textarea name="address" placeholder="Additional Comments"></textarea>
+        <textarea name="address" placeholder="Additional Comments" class="comments"></textarea>
         <input type="button" name="previous" class="previous action-button" value="Previous" />
         <input type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
@@ -114,8 +114,11 @@
             <input type="text" name="number" placeholder="Phone number" />
             <input type="text" name="email" placeholder="Email" />
             <input type="button" name="previous" class="previous action-button" value="Previous" />
-            <input type="submit" name="submit" class="submit action-button" value="Submit" />
+            <input type="button" name="submit" class="next action-button" value="Submit" />
         </fieldset>
+        <fieldset>
+                <h2 class="fs-title">Thank you. Your claim has been submitted!</h2>
+        </fieldset>    
     </form>
     <script src="{{ url_for('static',filename='js/index.js') }}"></script>
 </body>

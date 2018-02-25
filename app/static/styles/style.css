@@ -16,6 +16,7 @@ html {
 body {
 	font-family: montserrat, arial, verdana;
 }
+
 /*form styles*/
 #msform {
 	width: 700px;
@@ -52,6 +53,12 @@ body {
 	color: #2C3E50;
 	font-size: 13px;
 }
+
+/*selects*/
+#msform select {
+	margin-top: 10px;
+}
+
 /*buttons*/
 #msform .action-button {
 	width: 100px;
@@ -67,6 +74,11 @@ body {
 #msform .action-button:hover, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
+#msform .btn-upload,
+#msform .comments {
+	margin-top: 10px;
+}
+
 /*headings*/
 .fs-title {
 	font-size: 15px;
