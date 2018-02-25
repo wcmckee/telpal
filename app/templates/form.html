@@ -11,38 +11,111 @@
     <form id="msform">
     <!-- progressbar -->
     <ul id="progressbar">
-        <li class="active">Account Setup</li>
-        <li>Social Profiles</li>
-        <li>Personal Details</li>
+        <li class="active">Your Product</li>
+        <li>Your Claim</li>
+        <li>Your Data</li>
+        <li>Confirm</li>
     </ul>
     <!-- fieldsets -->
     <fieldset>
-        <h2 class="fs-title">Create your account</h2>
-        <h3 class="fs-subtitle">This is step 1</h3>
-        <input type="text" name="email" placeholder="Email" />
-        <input type="password" name="pass" placeholder="Password" />
-        <input type="password" name="cpass" placeholder="Confirm Password" />
-        <input type="button" name="next" class="next action-button" value="Next" />
+        <h2 class="fs-title">Your Product</h2>
+        <h3 class="fs-subtitle">Welcome to TelcoPal, the one stop shop to guide you through the complaint process with your telco provider.</h3>
+        <h3 class="fs-subtitle">Tell us your problem</h3>
+        Select your product type<br>
+        <select>
+            <option value="Home Internet">Home Internet</option>
+            <option value="Home Phone">Home Phone</option>
+            <option value="Mobile">Mobile</option>
+        </select>
+        <br><br>Who is your provider?<br>
+        <select>
+            <option value="Telstra">Telstra</option>
+            <option value="Optus">Optus</option>
+            <option value="TPG">TPG</option>
+        </select>
+        <br><br>What best describes the issue you are having?<br>
+        <select>
+            <option value="Faults">Faults</option>
+            <option value="Billing Error">Billing Error</option>
+            <option value="Service Outages">Service Outages</option>
+        </select>
+        <br><br><input type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
     <fieldset>
-        <h2 class="fs-title">Social Profiles</h2>
-        <h3 class="fs-subtitle">Your presence on the social network</h3>
-        <input type="text" name="twitter" placeholder="Twitter" />
-        <input type="text" name="facebook" placeholder="Facebook" />
-        <input type="text" name="gplus" placeholder="Google Plus" />
+        <h2 class="fs-title">Your Claim</h2>
+        On what date did your internet stop working?<br>
+        <select>
+            <option value="one">1</option>
+            <option value="thirtyone">30</option>
+        </select>
+        <select>
+            <option value="one">1</option>
+            <option value="twelve">12</option>
+        </select>
+        <select>
+            <option value="2018">2018</option>
+        </select>
+
+        <br><br>How long have you experienced an outage?<br>
+        <select>
+            <option value="zero">0</option>
+        </select>
+        Days
+        <select>
+            <option value="10">10</option>
+        </select>
+        Hours
+
+        <br><br>If known, please provide the reason for the outage?<br>
+        <select>
+            <option value="Infrastructure">Infrastructure</option>
+        </select>
+
+        <br><br>Have you already contacted your provider?<br>
+        <select>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <br><br>What was the outcome? Did you already recieved a compensation?<br>
+        <select>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
         <input type="button" name="previous" class="previous action-button" value="Previous" />
         <input type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
     <fieldset>
-        <h2 class="fs-title">Personal Details</h2>
-        <h3 class="fs-subtitle">We will never sell it</h3>
-        <input type="text" name="fname" placeholder="First Name" />
-        <input type="text" name="lname" placeholder="Last Name" />
-        <input type="text" name="phone" placeholder="Phone" />
-        <textarea name="address" placeholder="Address"></textarea>
+        <h2 class="fs-title">Account Information</h2>
+        <h3 class="fs-subtitle">Your Claim - Account Information</h3>
+
+        Who is your current plan?<br>
+        <select>
+            <option value="60">$60 per month</option>
+        </select>
+
+        <br><br>Please upload a copy of your account bill. This helps us verify your account with your provider and assess the compensation amount you are entitled to.<br>
+        <input name="Upload file" type="button" value="Upload File" />
+
+        <br><br>Please provide any additional details or comments that you think may help use with processing your claim.<br>
+        <textarea name="address" placeholder="Additional Comments"></textarea>
         <input type="button" name="previous" class="previous action-button" value="Previous" />
-        <input type="submit" name="submit" class="submit action-button" value="Submit" />
+        <input type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
+    <fieldset>
+            <h2 class="fs-title">Congratulations!</h2>
+            <br>You have a possible compensation claim of <br><h4>$220.00</h4>
+
+            <br><br>To proceed with your claim please provide your personal details below<br>
+
+            <input type="text" name="fname" placeholder="Name" />
+            <textarea name="address" placeholder="Address"></textarea>
+            <input type="text" name="number" placeholder="Phone number" />
+            <input type="text" name="email" placeholder="Email" />
+            <input type="button" name="previous" class="previous action-button" value="Previous" />
+            <input type="submit" name="submit" class="submit action-button" value="Submit" />
+        </fieldset>
     </form>
     <script src="{{ url_for('static',filename='js/index.js') }}"></script>
 </body>
