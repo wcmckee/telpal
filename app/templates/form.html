@@ -1,121 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>TelcoPal</title>
-    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/style.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <title>artctrl post</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
     <!-- multistep form -->
-    <form id="msform">
-    <!-- progressbar -->
-    <ul id="progressbar">
-        <li class="active">Your Product</li>
-        <li>Your Claim</li>
-        <li>Your Data</li>
-        <li>Confirm</li>
-    </ul>
-    <!-- fieldsets -->
-    <fieldset>
-      <img src="static/logo.svg" alt="logo"><br>
-    Welcome to TelcoPal, the one stop shop to guide you through the complaint process with your telco provider.<br><br>
-      <h3 class="fs-subtitle">Tell us your problem</h3>
+    <h1>create blog post</h1>
 
-        <h2 class="fs-title">Your Product</h2>
-
-        Select your product type<br>
-        <select>
-            <option value="Home Internet">Home Internet</option>
-            <option value="Home Phone">Home Phone</option>
-            <option value="Mobile">Mobile</option>
-        </select>
-        <br><br>Who is your provider?<br>
-        <select>
-            <option value="Telstra">Telstra</option>
-            <option value="Optus">Optus</option>
-            <option value="TPG">TPG</option>
-        </select>
-        <br><br>What best describes the issue you are having?<br>
-        <select>
-            <option value="Faults">Faults</option>
-            <option value="Billing Error">Billing Error</option>
-            <option value="Service Outages">Service Outages</option>
-        </select>
-        <br><br><input type="button" name="next" class="next action-button" value="Next" />
-    </fieldset>
-    <fieldset>
-        <h2 class="fs-title">Your Claim</h2>
-        On what date did your internet stop working?<br>
-        <input id="date" type="date">
+            <form method="POST">
+              <fieldset>
+                <legend>Create blogpost:</legend>
+                  blog path: <input type="text" name="blogpath"><br>
+                  blog name: <input type="text" name="blogname"><br>
+                  postname: <input type="text" name="postname"><br>
+                  posttag: <input type="text" name="posttag"><br>
+                  imgpath: <input type="text" name="imgpath"><br>
+                  <input type="submit" value="Submit"><br>
+                  </fieldset>
 
 
-        <br><br>How long have you experienced an outage?<br>
-        <select>
-            <option value="zero">0</option>
-        </select>
-        Days
-        <select>
-            <option value="10">10</option>
-        </select>
-        Hours
-
-        <br><br>If known, please provide the reason for the outage?<br>
-        <select>
-            <option value="Infrastructure">Infrastructure</option>
-        </select>
-
-        <br><br>Have you already contacted your provider?<br>
-        <select>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-        </select>
-
-        <br><br>What was the outcome? Did you already recieved a compensation?<br>
-        <select>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-        </select><br>
-
-        <input type="button" name="previous" class="previous action-button" value="Previous" />
-        <input type="button" name="next" class="next action-button" value="Next" />
-    </fieldset>
-    <fieldset>
-        <h2 class="fs-title">Account Information</h2>
-        <h3 class="fs-subtitle">Your Claim - Account Information</h3>
-
-        What is your current plan?<br>
-        <select>
-            <option value="60">$60 per month</option>
-        </select>
-
-        <br><br>Please upload a copy of your account bill. This helps us verify your account with your provider and assess the compensation amount you are entitled to.<br>
-        <input name="bill" type="file"><br>
-
-
-        <br><br>Please provide any additional details or comments that you think may help use with processing your claim.<br>
-        <textarea name="address" placeholder="Additional Comments" class="comments"></textarea>
-        <input type="button" name="previous" class="previous action-button" value="Previous" />
-        <input type="button" name="next" class="next action-button" value="Next" />
-    </fieldset>
-    <fieldset>
-            <h2 class="fs-title">Congratulations!</h2>
-            <br>You have a possible compensation claim of <br><h4>$220.00</h4>
-
-            <br><br>To proceed with your claim please provide your personal details below<br>
-
-            <input type="text" name="fname" placeholder="Name" />
-            <textarea name="address" placeholder="Address"></textarea>
-            <input type="text" name="number" placeholder="Phone number" />
-            <input type="text" name="email" placeholder="Email" />
-            <input type="button" name="previous" class="previous action-button" value="Previous" />
-            <input type="button" name="submit" class="next action-button" value="Submit" />
-        </fieldset>
-        <fieldset>
-                <h2 class="fs-title">Thank you. Your claim has been submitted!</h2>
-        </fieldset>
     </form>
-    <script src="{{ url_for('static',filename='js/index.js') }}"></script>
 </body>
 </html>
